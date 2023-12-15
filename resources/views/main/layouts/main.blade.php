@@ -17,7 +17,7 @@
     <header class="edica-header edica-landing-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.svg') }}" alt="Edica"></a>
+                <a class="navbar-brand" href="{{ route('main.index') }}"><img src="{{ asset('assets/images/logo.svg') }}" alt="Edica"></a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,8 +41,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Авторизованым</a>
                             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item" href="404.html">Персональная</a>
-                                <a class="dropdown-item" href="coming-soon.html">Админская</a>
+                                <a class="dropdown-item" href="{{ 'home' }}">Персональная</a>
+                                <a class="dropdown-item" href="{{ 'admin' }}">Админка</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
