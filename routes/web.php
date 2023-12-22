@@ -27,6 +27,15 @@ Route::group(['namespace' => 'Main'], function () {
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController')->name('admin.main.index');
-        // Route::get('/main', 'IndexController')->name('main.index');
+    });
+    Route::group(['namespace'=>'Category', 'prefix'=>'categories'], function () {
+        Route::get('/', 'IndexController')->name('admin.category');
+        Route::post('/', 'StoreController')->name('admin.category.store');
+        Route::get('/create', 'CreateController')->name('admin.category.create');
+        Route::get('/edit/{category}', 'EditController')->name('admin.category.edit');
+        Route::get('/show/{category}', 'ShowController')->name('admin.category.show');
+        Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
+        Route::delete('/{category}', 'DeleteController')->name('admin.category.delete');
+        
     });
 });

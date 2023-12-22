@@ -4,7 +4,7 @@
          with font-awesome or any other icon font library -->
     <li class="nav-header">Разделы</li>
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('admin.category') }}" class="nav-link">
         <i class="nav-icon far fa-images text-success"></i>
         <p>
           Categories
