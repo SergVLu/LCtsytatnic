@@ -11,6 +11,14 @@
       </a>
     </li>
     <li class="nav-item">
+      <a href="{{ route('admin.group') }}" class="nav-link">
+        <i class="nav-icon fas fa-table text-primary"></i>
+        <p>
+          Groups
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
       <a href="{{ route('admin.category') }}" class="nav-link">
         <i class="nav-icon far fa-images text-success"></i>
         <p>
