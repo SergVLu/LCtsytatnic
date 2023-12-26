@@ -23,7 +23,18 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => "required|string|min:3|max:8|unique:categories,name",
-            'group' => "required|exists:groups,name"
+            'group_id' => "required|exists:groups,id"
+        ];
+    }
+    public function messages(){
+        return[
+            'name.required'=> 'обязательное поле',
+            'name.string'=> 'обязательно текст',
+            'name.min'=> 'минимум 3 знака',
+            'name.max'=> 'максимум 8 знаков',
+            'name.unique'=> 'такая категория уже есть',
+            'group_id.exists'=> 'такая группа не существует',
+            'group_id.required'=> 'выберите из существующих вариантов',
         ];
     }
 }

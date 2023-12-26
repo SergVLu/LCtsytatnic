@@ -32,7 +32,7 @@
           <table id="example2" class="table table-bordered table-hover" style="width: 75%">
             <thead>
             <tr>
-              <th style="width: 20px">#</th>
+              <th style="width: 20px">#id</th>
               <th>Category</th>
               <th>Group</th>
               <th colspan="3" class="text-center" style="width: 90px">Actions</th>
@@ -43,7 +43,7 @@
                 <tr>
                   <td>{{ $category->id }}</td>
                   <td>{{ $category->name }}</td>
-                  <td>{{ $category->group }}</td>
+                  <td>{{ $groups[$category->group_id -1]->name }}</td>
                   <td style="width: 30px"><a href="{{ route('admin.category.edit',$category->id ) }}" class="btn btn-outline-warning btn-block btn-sm">
                     <i class="fa fa-edit"></i></a></td>
                   <td style="width: 30px"><a href="{{ route('admin.category.show',$category->id ) }}" class="btn btn-outline-info btn-block btn-sm">

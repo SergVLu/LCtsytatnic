@@ -11,7 +11,7 @@ class EditController extends Controller
 {
     public function __invoke(Category $category){
         // dd($category);
-        $groups=Group::get();
+        $groups=Group::get();//->pluck('name')
     return view('admin.category.edit', compact('category','groups'));
     }
 }
