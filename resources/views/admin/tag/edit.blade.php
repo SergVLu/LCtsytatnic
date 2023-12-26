@@ -42,7 +42,7 @@
                 <input type="text" class="form-control" placeholder="Tag name" name="name" value="{{ $tag->name }}">
               </div>
               @error('name')
-              <div class="text-danger">Это поле обязательно, <br> должно быть 3-18 символов</div>
+              <div class="text-danger">{{ $message }}</div>
               @enderror
             </div>
           </div>

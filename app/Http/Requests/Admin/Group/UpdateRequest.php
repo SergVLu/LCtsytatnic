@@ -25,4 +25,14 @@ class UpdateRequest extends FormRequest
             'name' => "required|string|min:3|max:18|unique:groups,name",
         ];
     }
+    
+    public function messages(){
+        return[
+            'name.required'=> 'обязательное поле',
+            'name.string'=> 'обязательно текст',
+            'name.min'=> 'минимум 3 знака',
+            'name.max'=> 'максимум 18 знаков',
+            'name.unique'=> 'такая категория уже есть',
+        ];
+    }
 }

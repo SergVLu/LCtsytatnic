@@ -38,10 +38,10 @@
             <div class="form-group row">
               <label for="Group" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Group name" name="name">
+                <input type="text" class="form-control" placeholder="Group name" name="name" value="{{ old('name') }}">
               </div>
               @error('name')
-              <div class="text-danger">Это поле обязательно, 3-18 символов</div>
+              <div class="text-danger">{{ $message }}</div>
               @enderror
             </div>
           </div>
